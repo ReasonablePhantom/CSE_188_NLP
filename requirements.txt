@@ -58,7 +58,6 @@ sympy==1.14.0
 termcolor==3.3.0
 threadpoolctl==3.6.0
 tokenizers==0.22.2
-torch==2.11.0
 tqdm==4.67.3
 transformers==5.6.2
 trl==1.2.0
