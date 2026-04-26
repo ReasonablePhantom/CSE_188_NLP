@@ -33,7 +33,7 @@ multiprocess==0.70.19
 networkx==3.6.1
 numpy==2.4.4
 packaging==26.2
-pandas==3.0.2
+pandas==2.2.2
 peft==0.19.1
 platformdirs==4.9.6
 propcache==0.4.1
