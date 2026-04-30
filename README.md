@@ -1,19 +1,19 @@
 # Heuristic Monotonicity Tags Help Prompted Inference but Reveal Fine-Tuning Fragility in a Small LLM on FLD
 
-[cite_start]This is the official repository for the paper **"Heuristic Monotonicity Tags Help Prompted Inference but Reveal Fine-Tuning Fragility in a Small LLM on FLD"**[cite: 889].
+This is the official repository for the paper **"Heuristic Monotonicity Tags Help Prompted Inference but Reveal Fine-Tuning Fragility in a Small LLM on FLD"**.
 
 ## Overview
 
-[cite_start]This repository contains the code and data to reproduce our investigation into whether heuristic monotonicity annotations help a small instruction-tuned language model (`Qwen2.5-1.5B-Instruct`) [cite: 972] [cite_start]perform formal natural language inference on the FLD.v2 dataset[cite: 959]. 
+This repository contains the code and data to reproduce our investigation into whether heuristic monotonicity annotations help a small instruction-tuned language model (`Qwen2.5-1.5B-Instruct`) perform formal natural language inference on the FLD.v2 dataset.
 
 **Key Findings:**
-* [cite_start]**Prompting:** Adding lightweight monotonicity labels improves direct prompting accuracy from 37.5% to 41.0%[cite: 893].
-* [cite_start]**Fine-Tuning Collapse:** Under free-generation QLoRA fine-tuning, the model exhibits a generation collapse, predicting the `UNKNOWN` class for almost all samples[cite: 894].
-* [cite_start]**Log-Prob Recovery:** When evaluating the exact same fine-tuned models using forced-choice log-prob scoring, discriminative ability is recovered (up to 48.0% accuracy)[cite: 896], demonstrating that generative collapse obscures latent semantic learning.
+**Prompting:** Adding lightweight monotonicity labels improves direct prompting accuracy from 37.5% to 41.0%.
+**Fine-Tuning Collapse:** Under free-generation QLoRA fine-tuning, the model exhibits a generation collapse, predicting the `UNKNOWN` class for almost all samples.
+**Log-Prob Recovery:** When evaluating the exact same fine-tuned models using forced-choice log-prob scoring, discriminative ability is recovered (up to 48.0% accuracy), demonstrating that generative collapse obscures latent semantic learning.
 
 ## Repository Structure
 
-* [cite_start]`CSE_188_NLP.ipynb`: The main Jupyter Notebook containing the complete pipeline: data preprocessing, heuristic labeling, model loading (4-bit QLoRA)[cite: 973], prompt-based inference, and forced-choice log-prob evaluation.
+* `CSE_188_NLP.ipynb`: The main Jupyter Notebook containing the complete pipeline: data preprocessing, heuristic labeling, model loading (4-bit QLoRA), prompt-based inference, and forced-choice log-prob evaluation.
 * `requirements.txt`: List of Python dependencies required to run the experiments.
 * `all_predictions.csv`: The raw model outputs and prediction logs from our evaluation runs.
 * `summary_metrics.csv`: The compiled accuracy and macro-F1 scores across different experimental settings.
